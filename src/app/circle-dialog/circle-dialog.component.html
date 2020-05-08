@@ -1,0 +1,19 @@
+<!--Dialog to accept input values for circles -->
+<h2 mat-dialog-title>Enter two input values</h2>
+        <mat-dialog-content >
+                <div class="InputDiv">
+                        <input matInput [(ngModel)]="firstName" placeholder="Enter your First Name" >
+                        <div class="text-danger" *ngIf="setFname">This field is required</div>
+                </div>
+                <div class="InputDiv">
+                        <input matInput [(ngModel)]="lastName" placeholder="Enter your Last Name">
+                        <div class="text-danger" *ngIf="setLname">This field is required</div>
+                </div> 
+ 
+        </mat-dialog-content>
+
+        <!--Action buttons for dialog-->
+<mat-dialog-actions>
+    <button mat-raised-button  (click)="sendData()" class="btn btn-success">Save</button>
+    <button mat-raised-button (click)="close()" class="btn btn-success">Close</button>
+</mat-dialog-actions>

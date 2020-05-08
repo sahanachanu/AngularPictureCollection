@@ -1,0 +1,73 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <!--List/grid Icons are placed here-->
+    <div class="IconsDiv">
+      <!--grid-view-icon-->
+        <div class="icon-view-div">
+            <img (click)="openGridView()" src="/assets/images/gridicon.png" width=48 height=48 style="padding:7px;">
+          </div> 
+          <!--list-view-icon-->
+      <div class="icon-view-div">
+        <img (click)="openListView()" src="/assets/images/listicon.png" width=48 height=48 style="padding:7px;">
+      </div>
+     
+    </div>
+  </div>
+</div>
+        
+<!--Grid view container-->
+<div class="row" #GridViewDiv>
+  <div class="col-sm-12 col-md-10 col-lg-10" style="margin:auto">
+    <!--Add new image grid-->
+      <div class="gallery gallery-addImage">
+          <img src="/assets/images/camera-icon.png" class="polaroid addImage">
+          <div class="middle">
+              <div class="viewImageText" (click)="openDialog()">ADD IMAGE</div>
+          </div>
+      </div>
+
+      <!--Image grids-->
+      <div class="gallery" *ngFor="let i of indexList">
+          <img [src]="imageList[i].imageUrl"  width=100% height=100% class="polaroid">
+          <div class="middle">
+              <div class="viewImageText" (click)="showImage(imageList[i].imageUrl)">VIEW</div>
+          </div>               
+      </div>
+    </div>
+  </div>
+            
+          
+<!--List view container-->
+  <div class="ImageListContainer" style="display:none" #ListViewDiv>
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-lg-8" style="margin:auto">
+          <ul class="list-group" *ngIf="imageList">
+            <!--Add image-->
+              <li class="list-group-item  list-group-item-action d-flex justify-content-between align-items-center" style="width:60%" (click)="openDialog()">
+                  Add Image
+                  <div class="list-image">
+                      <img src="/assets/images/image-icon.png" width=80 height=60>
+                  </div>
+              </li>
+
+              <!--Images list-->
+              <li *ngFor="let i of indexList" (click)="showImage(imageList[i].imageUrl)" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                  {{imageList[i].caption}}
+                  <div class="list-image">
+                      <img [src]="imageList[i].imageUrl"  class="imageIcon">
+                  </div>
+              </li>                  
+          </ul>
+      </div>
+    </div>            
+  </div>
+    
+  
+    
+
+
+
+    
+  
+  

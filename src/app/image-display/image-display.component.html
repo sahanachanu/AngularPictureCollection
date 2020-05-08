@@ -1,0 +1,11 @@
+<!--Image display dialog content-->
+<div *ngIf="data.url" class="imageDialog">
+    <img class="imageDisplayDialog"  [src]="data.url" #myImg >
+    <mat-dialog-actions>
+            <button   mat-dialog-close class="btn btn-success" mat-button mat-dialog-close="true" style="float:left">Edit Image</button>
+            <button mat-button mat-dialog-close="false" class="btn btn-success" style="float:left">Close</button>
+    </mat-dialog-actions>
+</div>
+
+
+

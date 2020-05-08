@@ -1,0 +1,33 @@
+<!--Upload Image Dialog Window Content-->
+<h2 mat-dialog-title>Add Image
+</h2>
+
+<!--From group starts here-->
+<form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
+    <div class="row">
+        <div class="col-md-12">
+            <!--Input file-->
+             <div class="form-group">
+                <input type = "file" accept="image/png, image/jpeg"  formControlName="imageUrl" (change)="uploadFileData($event)">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This field is required</div>
+            </div>
+            <!--Caption-->
+            <div class="form-group">
+                <input class="form-control" formControlName="caption" placeholder="Caption">
+                <div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This field is required</div>
+            </div>
+        </div>
+    </div>
+      
+    <!--Upload button is placed here-->
+    <div class="form-row">       
+        <div class="form-group col-md-12" >
+            <mat-dialog-actions>
+                    <button mat-button  type="submit" class="btn btn-success">Upload</button>
+                    <button mat-button  mat-dialog-close class="btn btn-success">Close</button>
+            </mat-dialog-actions>
+            <div class="text-success" *ngIf = "showMesg" style="margin:20px auto; font-size:16px">Image uploaded successfully</div>
+        </div>
+    </div>
+</form>
+        

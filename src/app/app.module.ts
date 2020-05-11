@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditImageComponent } from './edit-image/edit-image.component';
 import { CircleDialogComponent } from './circle-dialog/circle-dialog.component';
+import { NewEditImageComponent } from './new-edit-image/new-edit-image.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CircleDialogComponent } from './circle-dialog/circle-dialog.component';
     ImageListComponent,
     ImageDisplayComponent,
     EditImageComponent,
-    CircleDialogComponent
+    CircleDialogComponent,
+    NewEditImageComponent
   ],
 
   entryComponents:[ImagesComponent, ImageDisplayComponent, CircleDialogComponent],

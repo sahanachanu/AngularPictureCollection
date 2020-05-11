@@ -1,105 +1,106 @@
 <div class="container-fluid container-div">
-     <!--Header for the page goes here-->
-     <nav class="navbar navbar-expand-lg navbarDiv">
-          <div class="row" style="width:90%">
-              <div class="col-md-8"></div>
-                  <div class="col-md-4">
-                      <img src="/assets/images/home-icon.png"  class="home-icon" (click)="goBack()">
-                   </div>
-                              
-         </div>
-     </nav>
-<div class="container"> 
-                <div class="row pageTitleRow">
-                                <!--Title of the page goes here-->
-                                <div class="col-md-12 PageTitle">Edit Image</div>
-                        </div>    
-        <div class="row" >
-                <div class="col-sm-12 col-md-12 col-lg-6 " style="margin:auto">
-                        <!--Canvas is placed here-->
-                        <div class="displayImageDiv" >
-                                <canvas  #myCanvas width=460 height =330  style="margin:auto"></canvas>
-                        </div>
-                 </div>
-    
-                 <!--Draw circle button is placed here-->
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                        <div class="actionButtonsDiv">
-                                <div class="row" #drawCircleBtn>
-                                        <div class="col-md-12">
-                                                <button type="button" class="btn btn-success editPageBtn" id="draw"  (click)="ondrawCircle();" >Draw Circle </button>
-                                        </div>
-                                </div>
-
-                                <!-- x, y values of last drawn circle  displayed here-->
-                                <div class="row" style="margin-bottom:25px">
-                                        <div class="col-sm-4 col-md-4 col-lg-12">
-                                               
-                                                <p style="font-size:20px; margin:5px; font-weight:bold">Coordinate values of the last circle drawn</p>
-                                                <!--x value-->
-                                                <div class="positionDiv">
-                                                        <div class="xvalLabel">X:</div>
-                                                        <div class="xvalDiv">{{xpos}}</div>
-                                                </div>
-                                                <!--y value-->
-                                                <div class="positionDiv">
-                                                            <div class="xvalLabel" >Y:</div>
-                                                            <div class="xvalDiv">{{ypos}}</div>
-                                                </div>
-                                            </div>
-                                </div>
-
-                                <!-- Input values and x, y values of selected  circle  displayed here-->
-                                <div class="row">
-                                        <!--x value-->
-                                    <div class="col-sm-4 col-md-4 col-lg-12">
-                                        <p style="font-size:20px; margin:5px; font-weight:bold">Coordinate values of the circle clicked/selected </p>
-                                        <div class="positionDiv">
-                                                <div class="xvalLabel">X:</div>
-                                                <div class="xvalDiv" #xvalue></div>
-                                        </div>
-                                        <!--y value-->
-                                        <div class="positionDiv">
-                                                    <div class="xvalLabel" >Y:</div>
-                                                    <div class="xvalDiv" #yvalue></div>
-                                        </div>
-                                    </div>
-                        
-
-                                <div class="col-sm-8 col-md-8 col-lg-12">
-                                <!--first name-->
-                                        <div class="positionDiv">
-                                                <div class="fnameLabel">First Name:</div>
-                                                <div class="fnameDiv" #fnameVal></div>
-                                        </div>
-                                <!--last name-->                       
-                                        <div class="positionDiv">
-                                                <div class="fnameLabel">Last Name:</div>
-                                                <div class="fnameDiv" #lnameVal></div>
-                                        </div>
-                                                
-                                </div>
-                                      
-                            </div>
-                        </div>
-                        
+                <!--Header for the page goes here-->
+                <nav class="navbar navbar-expand-lg navbarDiv">
+                     <div class="row" style="width:90%">
+                         <div class="col-md-8"></div>
+                             <div class="col-md-4">
+                                 <img src="/assets/images/home-icon.png"  class="home-icon" (click)="goBack()">
+                              </div>
+                                         
                     </div>
-                    
-                </div>
-        </div>
-        <!--Footer for page goes here-->
-     <div class="row">
-                <footer class="col-md-12 page-footer  navbarDiv"></footer>
-
-        </div>
-    </div>
-
-     
-
-   
-
-
-
-    
-
-
+                </nav>
+           <div class="container"> 
+                           <div class="row pageTitleRow">
+                                           <!--Title of the page goes here-->
+                                           <div class="col-md-12 PageTitle">Edit Image</div>
+                                   </div>    
+                   <div class="row" >
+                           <div class="col-sm-12 col-md-12 col-lg-6 " style="margin:auto">
+                                   <!--Canvas is placed here-->
+                                   <div class="displayImageDiv" >
+                                           <canvas  #myCanvas width=460 height =330  style="margin:auto"></canvas>
+                                   </div>
+                            </div>
+               
+                            <!--Draw circle button is placed here-->
+                           <div class="col-sm-12 col-md-12 col-lg-6">
+                                   <div class="actionButtonsDiv">
+                                           <div class="row" #drawCircleBtn>
+                                                   <div class="col-md-12">
+                                                           <button type="button" class="btn btn-success editPageBtn" id="draw"  (click)="ondrawCircle();" >Draw Circle </button>
+                                                   </div>
+                                           </div>
+           
+                                           <!-- x, y values of last drawn circle  displayed here-->
+                                           <div class="row" style="margin-bottom:25px">
+                                                   <div class="col-sm-4 col-md-4 col-lg-12">
+                                                          
+                                                           <p style="font-size:20px; margin:5px; font-weight:bold">Coordinate values of the last circle drawn</p>
+                                                           <!--x value-->
+                                                           <div class="positionDiv">
+                                                                   <div class="xvalLabel">X:</div>
+                                                                   <div class="xvalDiv">{{xpos}}</div>
+                                                           </div>
+                                                           <!--y value-->
+                                                           <div class="positionDiv">
+                                                                       <div class="xvalLabel" >Y:</div>
+                                                                       <div class="xvalDiv">{{ypos}}</div>
+                                                           </div>
+                                                       </div>
+                                           </div>
+           
+                                           <!-- Input values and x, y values of selected  circle  displayed here-->
+                                           <div class="row">
+                                                   <!--x value-->
+                                               <div class="col-sm-4 col-md-4 col-lg-12">
+                                                   <p style="font-size:20px; margin:5px; font-weight:bold">Coordinate values of the circle clicked/selected </p>
+                                                   <div class="positionDiv">
+                                                           <div class="xvalLabel">X:</div>
+                                                           <div class="xvalDiv" #xvalue></div>
+                                                   </div>
+                                                   <!--y value-->
+                                                   <div class="positionDiv">
+                                                               <div class="xvalLabel" >Y:</div>
+                                                               <div class="xvalDiv" #yvalue></div>
+                                                   </div>
+                                               </div>
+                                   
+           
+                                           <div class="col-sm-8 col-md-8 col-lg-12">
+                                           <!--first name-->
+                                                   <div class="positionDiv">
+                                                           <div class="fnameLabel">First Name:</div>
+                                                           <div class="fnameDiv" #fnameVal></div>
+                                                   </div>
+                                           <!--last name-->                       
+                                                   <div class="positionDiv">
+                                                           <div class="fnameLabel">Last Name:</div>
+                                                           <div class="fnameDiv" #lnameVal></div>
+                                                   </div>
+                                                           
+                                           </div>
+                                                 
+                                       </div>
+                                   </div>
+                                   
+                               </div>
+                               
+                           </div>
+                   </div>
+                   <!--Footer for page goes here-->
+                <div class="row">
+                           <footer class="col-md-12 page-footer  navbarDiv"></footer>
+           
+                   </div>
+               </div>
+           
+                
+           
+              
+           
+           
+           
+               
+           
+           
+           

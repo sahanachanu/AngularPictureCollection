@@ -1,0 +1,104 @@
+<div class="container-fluid container-div">
+    <!--Header for the page goes here-->
+    <nav class="navbar navbar-expand-lg navbarDiv">
+         <div class="row" style="width:90%">
+             <div class="col-md-8"></div>
+                 <div class="col-md-4">
+                     <img src="/assets/images/home-icon.png"  class="home-icon" (click)="goBack()">
+                  </div>
+                             
+        </div>
+    </nav>
+    <div class="container"> 
+        <div class="row pageTitleRow">
+            <!--Title of the page goes here-->
+            <div class="col-md-12 PageTitle">Edit Image</div>
+        </div>    
+        <div class="row" >
+            <div class="col-sm-12 col-md-12 col-lg-6 " style="margin:auto">
+                   <!--Div holding the canvas and the circles-->
+                <div style="position:relative; width:460px; height:330px" class="mainDiv" #mainDiv>
+                    <canvas   width=460 height =330  style="margin:auto; position:absolute" #newCanvasDiv>  </canvas>
+                    <div class="overlayDiv"></div>
+                </div>
+            </div>
+   
+            <!--Draw circle button is placed here-->
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <div class="row actionButtonsDiv" #drawCircleBtn>
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-success editPageBtn" id="draw"  (click)="ondrawCircle();" #btn>Draw Circle </button>
+                    </div>
+                </div>
+                        
+                <!-- x, y values of last drawn circle  displayed here-->
+                <div class="row" style="margin-bottom:25px">
+                    <div class="col-sm-4 col-md-4 col-lg-12">
+                         <p style="font-size:20px; margin:5px; font-weight:bold">Coordinate values of the last circle drawn</p>
+                            <!--x value-->
+                            <div class="positionDiv">
+                                <div class="xvalLabel">X:</div>
+                                <div class="xvalDiv">{{xpos}}</div>
+                             </div>
+                             <!--y value-->
+                             <div class="positionDiv">
+                                <div class="xvalLabel" >Y:</div>
+                                <div class="xvalDiv">{{ypos}}</div>
+                             </div>
+                    </div>
+                </div>
+
+                              
+
+                <!-- Input values and x, y values of selected  circle  displayed here-->
+                <div class="row">
+                    <!--x value-->
+                    <div class="col-sm-4 col-md-4 col-lg-12">
+                        <p style="font-size:20px; margin:5px; font-weight:bold">Coordinate values of the circle clicked/dragged </p>
+                        <div class="positionDiv">
+                            <div class="xvalLabel">X:</div>
+                            <div class="xvalDiv" #xvalue></div>
+                        </div>
+                        <!--y value-->
+                        <div class="positionDiv">
+                            <div class="xvalLabel" >Y:</div>
+                            <div class="xvalDiv" #yvalue></div>
+                        </div>
+                    </div>
+                </div>
+
+                           
+            </div>
+        </div>
+        <!--Circle array is displayed here-->
+         <div class="row">
+            <div class="col-12">
+                 <div *ngFor="let circle of circlesArray">
+                  {{circle | json}}
+                 </div>
+            </div>
+         </div>
+                               
+                                     
+    </div>
+
+
+
+       
+
+       <!--Footer for page goes here-->
+    <div class="row">
+               <footer class="col-md-12 page-footer  navbarDiv"></footer>
+
+    </div>
+</div>
+
+    
+
+  
+
+
+
+   
+
+

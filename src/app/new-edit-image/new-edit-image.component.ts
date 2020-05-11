@@ -11,6 +11,7 @@ import { CircleDialogComponent } from '../circle-dialog/circle-dialog.component'
   templateUrl: './new-edit-image.component.html',
   styleUrls: ['./new-edit-image.component.css']
 })
+
 export class NewEditImageComponent implements OnInit {
 
   public context: any;

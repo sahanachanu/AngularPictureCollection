@@ -1,4 +1,4 @@
-# OerlikonProject
+# Angular Picture Collection
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
 This project illustrates an image gallery.it allows user to upload images to a firebase-a real time database.Also allows user to edit image on a HTML5 canvas.
